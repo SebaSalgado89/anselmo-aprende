@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../features/home/home_screen.dart';
 import 'app_theme.dart';
+import 'routes.dart';
 
 class AnselmoApp extends StatelessWidget {
   const AnselmoApp({super.key});
@@ -9,10 +9,11 @@ class AnselmoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Anselmo Aprende',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      initialRoute: AppRoutes.splash,
+      routes: AppRoutes.routes,
     );
   }
 }
